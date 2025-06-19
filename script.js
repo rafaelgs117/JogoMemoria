@@ -41,6 +41,7 @@ function tocarAudioAleatorio(listaAudios) {
 
 function startGame(difficulty) {
   isGameRunning = true;
+  toggleDifficultyButtons(false); // desativa botões de dificuldade
   const combinations = difficulty === 'easy' ? 10 : difficulty === 'medium' ? 15 : 20;
   cards = [];
   matchedCards = 0;
@@ -119,6 +120,8 @@ function checkMatch() {
         document.getElementById('message').style.display = 'block';
         clearInterval(timerInterval);
         isGameRunning = false;
+        toggleDifficultyButtons(true); // reativa botões de dificuldade
+
 
         vitoriaAudio.currentTime = 0;
         vitoriaAudio.play();
@@ -139,6 +142,7 @@ function checkMatch() {
       lockBoard = false;
     };
   }
+  document.getElementById('restart-button').disabled = false;
 }
 
 function restartGame() {
@@ -158,3 +162,10 @@ function updateTimerDisplay() {
   const seconds = String(secondsElapsed % 60).padStart(2, '0');
   document.getElementById('timer').textContent = `⏱ Tempo: ${minutes}:${seconds}`;
 }
+
+function toggleDifficultyButtons(state) {
+  document.getElementById('easy-btn').disabled = !state;
+  document.getElementById('medium-btn').disabled = !state;
+  document.getElementById('hard-btn').disabled = !state;
+}
+
