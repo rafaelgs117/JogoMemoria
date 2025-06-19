@@ -8,19 +8,30 @@
 </head>
 <body>
 <h1>Jogo da Memória</h1>
+<h2>
+  Bem vindo ao Jogo da Memória!<br />
+  Escolha o nível de dificuldade e teste sua memória, bom jogo!
+</h2>
 <div id="timer" style="font-size:18px; margin-bottom:10px;">⏱ Tempo: 00:00</div>
 <div id="game-board"></div>
 <div id="message" style="color:green; font-weight:bold; margin-top:15px; display:none;"></div>
 <div class="buttons">
-  <button onclick="startGame('easy')">Fácil (10 combinações)</button>
-  <button onclick="startGame('medium')">Médio (15 combinações)</button>
-  <button onclick="startGame('hard')">Difícil (20 combinações)</button>
-  <button onclick="restartGame()">Reiniciar</button>
+  <button id="easy-btn" onclick="startGame('easy')">Fácil (10 combinações)</button>
+  <button id="medium-btn" onclick="startGame('medium')">Médio (15 combinações)</button>
+  <button id="hard-btn" onclick="startGame('hard')">Difícil (20 combinações)</button>
+  <button id="restart-button" onclick="restartGame()" disabled>Reiniciar</button>
 </div>
 
   <div id="message">🎉 Parabéns! Você ganhou!</div>
 
+  <img src="img/marca-fmp-3.png" alt="Marca FMP" class="logo-topo">
+  <img src="img/logo-ads-fmp-6.png" alt="Logo ADS FMP" class="logo-rodape">
+
+    <footer>
+    © 2025 Rafael Gonçalves da Silva, Faculdade Municipal de Palhoça. Todos os direitos reservados.<br />
+    Contato: <a href="mailto:rafaelsilva543@hotmail.com">rafaelsilva543@hotmail.com</a>
+    </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
