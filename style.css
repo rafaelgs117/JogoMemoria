@@ -1,16 +1,29 @@
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-align: center;
-  background: linear-gradient(to right, #fddde6, #000102);
-  color: #333;
   margin: 0;
   padding: 20px;
+  color: #fff;
+
+  background-image: url('img/fundo.jpg'); /* nome da imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
-  color: #ff6f61;
-  font-size: 2.5em;
+  color: #f6c90e;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000;
   margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000;
 }
 
 #game-board {
@@ -20,6 +33,10 @@ h1 {
   gap: 12px;
   max-width: 900px;
   margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #fff;
   transition: opacity 0.5s;
 }
 
@@ -29,8 +46,8 @@ h1 {
   border-radius: 15px;
   cursor: pointer;
   perspective: 1000px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: width 0.3s, height 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s;
 }
 
 .card.medium {
@@ -41,6 +58,10 @@ h1 {
 .card.hard {
   width: 70px;
   height: 70px;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-inner {
@@ -65,10 +86,11 @@ h1 {
 }
 
 .card-front {
-  background-color: #ffcc70;
+  background-color: #fce38a;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid #fff;
 }
 
 .card-back {
@@ -76,38 +98,42 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border: 2px solid #fff;
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 button {
-  margin: 5px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 10px;
+  margin: 8px;
+  padding: 14px 24px;
+  font-size: 18px;
+  border-radius: 12px;
   border: none;
-  background-color: #ffa07a;
-  color: white;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(45deg, #8ec5fc 0%, #e0c3fc 100%);
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 button:hover {
-  background-color: #ff7f50;
+  transform: scale(1.05);
+  background-color: #a29bfe;
 }
 
 button:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 #message {
-  font-size: 24px;
-  color: #00cc66;
+  font-size: 26px;
+  color: #00ffcc;
   margin-top: 20px;
   display: none;
+  text-shadow: 2px 2px 5px #000;
 }
 
 @media (max-width: 600px) {
@@ -117,8 +143,40 @@ button:active {
   }
 }
 
-#timer {
-  font-size: 20px;
-  margin-bottom: 15px;
+.logo-topo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 90px;
+  height: auto;
+  z-index: 1000;
+}
+
+.logo-rodape {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
   color: #ffffff;
+  
+  padding: 12px 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  color: #00ccff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
