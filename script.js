@@ -29,7 +29,7 @@ const imageUrls = [
   'img/sun.png', 'img/bf1.png', 'img/doom.png', 'img/cath.png', 'img/danji.png',
   'img/fallout.png', 'img/forza.png', 'img/mario.png', 'img/pgr.png',
   'img/rover.png', 'img/vargil.png', 'img/truk.png'
-];
+]; 
 
 function tocarAudioAleatorio(listaAudios) {
   const index = Math.floor(Math.random() * listaAudios.length);
