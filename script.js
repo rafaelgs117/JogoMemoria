@@ -24,7 +24,7 @@ const vitoriaAudio = new Audio('audio/vitoria.mp3');
 vitoriaAudio.preload = 'auto';
 
 const imageUrls = [
-  'img/danji2.png', 'img/minecraft.png', 'img/halflife.png', 'img/gta.png',
+  'img/cath2.png', 'img/minecraft.png', 'img/halflife.png', 'img/gta.png',
   'img/fortnite.png', 'img/zelda.png', 'img/reddead.png', 'img/amongus.png',
   'img/sun.png', 'img/bf1.png', 'img/doom.png', 'img/cath.png', 'img/danji.png',
   'img/fallout.png', 'img/forza.png', 'img/mario.png', 'img/pgr.png',
